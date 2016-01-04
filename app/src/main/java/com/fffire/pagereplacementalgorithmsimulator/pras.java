@@ -22,7 +22,7 @@ public class pras {
     private int blockFlag[] = new int[BlockSize];			    //intFlag判断该换出的页面
 
     public pras(){
-        //默认构造方法
+
     }
     public pras (int bSize, int pSize, int page[]){
         //带参构造方法,传入数据
@@ -134,8 +134,8 @@ public class pras {
         //---------------------------------------------------
         //输出到show相应字符串
         for(int i =0 ;i < pSize;i++) {
-            System.out.print(" " + page[i] + "→");
-            show_OPT += " " + page[i] + "→";            //输出到字符串
+            System.out.print(" " + page[i] + "→ ");
+            show_OPT += " " + page[i] + "→ ";            //输出到字符串
             for(int x = 0;x < bSize;x++){
                 if(result[i][x] == -1)
                     break;
@@ -149,8 +149,8 @@ public class pras {
         }
         System.out.println("缺页次数: " + noPageCount);
         show_OPT += "缺页次数: " + noPageCount + "\n";                          //输出到字符串
-        System.out.println("缺 页 率: %" + ((double)noPageCount/pSize)*100 );
-        show_OPT += "缺 页 率: %" + ((double)noPageCount/pSize)*100 + "\n";    //输出到字符串
+        System.out.println("缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" );
+        show_OPT += "缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" + "\n";    //输出到字符串
         //-----------------------------------------------------------
     }
 
@@ -185,8 +185,8 @@ public class pras {
         //---------------------------------------------------
         //输出到show相应字符串
         for(int i =0 ;i < pSize;i++) {
-            System.out.print(" " + page[i] + "→");
-            show_FIFO += " " + page[i] + "→";            //输出到字符串
+            System.out.print(" " + page[i] + "→ ");
+            show_FIFO += " " + page[i] + "→ ";            //输出到字符串
             for(int x = 0;x < bSize;x++){
                 if(result[i][x] == -1)
                     break;
@@ -200,8 +200,8 @@ public class pras {
         }
         System.out.println("缺页次数: " + noPageCount);
         show_FIFO += "缺页次数: " + noPageCount + "\n";                          //输出到字符串
-        System.out.println("缺 页 率: %" + ((double)noPageCount/pSize)*100 );
-        show_FIFO += "缺 页 率: %" + ((double)noPageCount/pSize)*100 + "\n";    //输出到字符串
+        System.out.println("缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" );
+        show_FIFO += "缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" + "\n";    //输出到字符串
         //-----------------------------------------------------------
 
     }
@@ -248,8 +248,8 @@ public class pras {
         //---------------------------------------------------
         //输出到show相应字符串
         for(int i =0 ;i < pSize;i++) {
-            System.out.print(" " + page[i] + "→");
-            show_LRU += " " + page[i] + "→";            //输出到字符串
+            System.out.print(" " + page[i] + "→ ");
+            show_LRU += " " + page[i] + "→ ";            //输出到字符串
             for(int x = 0;x < bSize;x++){
                 if(result[i][x] == -1)
                     break;
@@ -263,8 +263,8 @@ public class pras {
         }
         System.out.println("缺页次数: " + noPageCount);
         show_LRU += "缺页次数: " + noPageCount + "\n";                          //输出到字符串
-        System.out.println("缺 页 率: %" + ((double)noPageCount/pSize)*100 );
-        show_LRU += "缺 页 率: %" + ((double)noPageCount/pSize)*100 + "\n";    //输出到字符串
+        System.out.println("缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" );
+        show_LRU += "缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" + "\n";    //输出到字符串
         //-----------------------------------------------------------
     }
 
@@ -309,8 +309,8 @@ public class pras {
         //---------------------------------------------------
         //输出到show相应字符串
         for(int i =0 ;i < pSize;i++) {
-            System.out.print(" " + page[i] + "→");
-            show_Clock += " " + page[i] + "→";            //输出到字符串
+            System.out.print(" " + page[i] + "→ ");
+            show_Clock += " " + page[i] + "→ ";            //输出到字符串
             for(int x = 0;x < bSize;x++){
                 if(result[i][x] == -1)
                     break;
@@ -324,8 +324,9 @@ public class pras {
         }
         System.out.println("缺页次数: " + noPageCount);
         show_Clock += "缺页次数: " + noPageCount + "\n";                          //输出到字符串
-        System.out.println("缺 页 率: %" + ((double)noPageCount/pSize)*100 );
-        show_Clock += "缺 页 率: %" + ((double)noPageCount/pSize)*100 + "\n";    //输出到字符串
+        System.out.println("缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" );
+        show_Clock += "缺 页 率:  " + ((double)noPageCount/pSize)*100 + "%" + "\n";    //输出到字符串
         //-----------------------------------------------------------
     }
+
 }

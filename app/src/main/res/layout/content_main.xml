@@ -64,15 +64,27 @@
         android:id="@+id/editText2"
         android:layout_below="@+id/textView3"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="220dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:text="计 算"
+        android:text="计     算"
+        android:textSize="30dp"
         android:id="@+id/button1"
         android:layout_marginBottom="110dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入数字以空格隔开"
+        android:id="@+id/textView4"
+        android:textSize="18dp"
+        android:textColor="@color/colorText"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView3" />
 </RelativeLayout>
