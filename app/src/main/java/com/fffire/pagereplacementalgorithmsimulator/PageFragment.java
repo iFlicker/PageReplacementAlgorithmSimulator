@@ -24,7 +24,6 @@ public class PageFragment extends Fragment {
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-
         PageFragment pageFragment = new PageFragment();
         pageFragment.setArguments(args);
         return pageFragment;
@@ -34,11 +33,11 @@ public class PageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
-
-        ropt = ((ApplicationHelper)getActivity().getApplicationContext()).getOpt();
-        rfifo = ((ApplicationHelper)getActivity().getApplicationContext()).getFifo();
-        rlru = ((ApplicationHelper)getActivity().getApplicationContext()).getLru();
-        rclock = ((ApplicationHelper)getActivity().getApplicationContext()).getClock();
+        //通过Context接受上计算结果字符串
+        ropt = ((ApplicationHelper) getActivity().getApplicationContext()).getOpt();
+        rfifo = ((ApplicationHelper) getActivity().getApplicationContext()).getFifo();
+        rlru = ((ApplicationHelper) getActivity().getApplicationContext()).getLru();
+        rclock = ((ApplicationHelper) getActivity().getApplicationContext()).getClock();
     }
 
     @Nullable
@@ -47,23 +46,21 @@ public class PageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
         //TextView tvs = (TextView)getActivity().findViewById(R.id.textView_show);
         //tvs.setText("Fragment #");
-
         //ropt = (ApplicationHelper)(getActivity().getApplicationContext()).
 
         TextView textView = (TextView) view;
-        textView.setMovementMethod(ScrollingMovementMethod.getInstance());
+        textView.setMovementMethod(ScrollingMovementMethod.getInstance()); //设置滚动样式
 
-        if(mPage==1){
-            textView.setText("Fragment #" + mPage + "\n"+ ropt);
-        }else if(mPage==2){
-            textView.setText("Fragment #" + mPage + "\n"+ rfifo);
-        }else if(mPage==3){
-            textView.setText("Fragment #" + mPage + "\n"+ rlru);
-        }else if(mPage==4){
-            textView.setText("Fragment #" + mPage + "\n"+ rclock);
+        //按mpage判断四个算法,显示相应字符串
+        if (mPage == 1) {
+            textView.setText(" " + "\n" + ropt);
+        } else if (mPage == 2) {
+            textView.setText(" " + "\n" + rfifo);
+        } else if (mPage == 3) {
+            textView.setText(" " + "\n" + rlru);
+        } else if (mPage == 4) {
+            textView.setText(" " + "\n" + rclock);
         }
-
-        //textView.setText("Fragment #" + mPage + ropt);
 
         return view;
     }

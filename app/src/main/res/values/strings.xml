@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Page replacement algorithm Simulator</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_main">页面置换算法模拟</string>
+    <string name="title_activity_result">ResultShowPage</string>
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->

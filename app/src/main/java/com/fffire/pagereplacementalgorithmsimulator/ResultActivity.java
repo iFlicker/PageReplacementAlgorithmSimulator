@@ -3,15 +3,10 @@ package com.fffire.pagereplacementalgorithmsimulator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-
-import com.fffire.pagereplacementalgorithmsimulator.SimpleFragmentPagerAdapter;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -42,6 +37,7 @@ public class ResultActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
 
+        /*
         //接受数据包
         Intent itr = getIntent();
         Bundle dbr = itr.getExtras();
@@ -55,8 +51,7 @@ public class ResultActivity extends AppCompatActivity {
         end.putString("efifo",rfifo);
         end.putString("elru",rlru);
         end.putString("eclock", rclock);
-
-
+        */
 
 
     }
